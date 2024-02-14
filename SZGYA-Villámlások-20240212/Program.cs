@@ -59,9 +59,12 @@ namespace SZGYA_Villámlások_20240212
             //9
             Console.WriteLine($"\n9.feladat: {villamnapok.Chunk(20).First().Sum(v => v.Orak.Sum())}");
 
-            //10 - nincs kész
+            //10
             var min = villamnapok.MinBy(v => v.Orak.Min());
-            Console.WriteLine($"\n10.feladat: {min}");
+            Console.WriteLine($"\n10.feladat: {min.Nap}.nap {min.Orak.IndexOf(min.Orak.Min()) + 1} óra = {min.Orak.Min()} db villám");
+
+            //11
+            Console.WriteLine($"\n11.feladat: {villamnapok[7 - 1].Orak.IndexOf(villamnapok[7 - 1].Orak.Max()) + 1}");
         }
     }
 }
